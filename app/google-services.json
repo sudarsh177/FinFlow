@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1011006720033",
+    "project_id": "finflow-5d997",
+    "storage_bucket": "finflow-5d997.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011006720033:android:45f149323aa2db76da7b60",
+        "android_client_info": {
+          "package_name": "com.example.finflow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5bBhhJKWA4ft5VdJozpWAuDO4oD27ox0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
