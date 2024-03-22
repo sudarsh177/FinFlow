@@ -52,8 +52,6 @@ public class Dashboard extends AppCompatActivity {
                 return true;
             }
         });
-
-        // Set the initial fragment
         getSupportFragmentManager().beginTransaction().replace(R.id.bottomFragment, new HomeFragment()).commit();
     }
 }
