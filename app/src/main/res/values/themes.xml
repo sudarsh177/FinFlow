@@ -1,9 +1,35 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.FinFlow" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
-
-    <style name="Theme.FinFlow" parent="Base.Theme.FinFlow" />
+    <style name="buttonBackground" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/ButtonBackground</item>
+        <item name="android:shape">rectangle</item>
+        <item name="android:radius">4dp</item>
+    </style>
+    <style name="buttonBackground1" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:backgroundTint">@color/ButtonBackground</item>
+    </style>
+    <style name="searchBackground" parent="Widget.AppCompat.SearchView">
+        <item name="android:background">@color/SearchBackground</item>
+    </style>
+    <style name="Theme.FinFlow_New_Version" parent="Base.Theme.FinFlow">
+        <item name="colorPrimary">@color/lavender</item>
+        <item name="colorPrimaryVariant">@color/lavender</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+    <style name="Theme.FinFlow_New_Version.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.FinFlow" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
 </resources>

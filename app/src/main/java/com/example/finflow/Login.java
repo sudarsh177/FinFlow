@@ -1,6 +1,8 @@
 package com.example.finflow;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.finflow.Model.UserData;
+import com.example.finflow.bottom_fragment.HomeFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -95,7 +98,7 @@ public class Login extends AppCompatActivity {
 
                 Toast.makeText(Login.this, "Log in successful.", Toast.LENGTH_SHORT).show();
 
-                Intent intent =  new Intent(getApplicationContext(),Dashboard.class);
+                Intent intent =  new Intent(getApplicationContext(), Dashboard.class);
                 startActivity(intent);
             }
             else{
