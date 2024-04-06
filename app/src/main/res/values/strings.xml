@@ -30,4 +30,9 @@
     <string name="log_income_expenses">Log Income/ Expenses</string>
     <string name="log_income_expenses1">Log Income/ Expenses</string>
     <string name="stocks">Stocks</string>
+    <string name="stockSymbol">stockSymbol</string>
+    <string name="price">price</string>
+    <string name="priceChange">priceChange</string>
+    <string name="companyName">companyName</string>
+    <string name="addStockMenu">addStockMenu</string>
 </resources>

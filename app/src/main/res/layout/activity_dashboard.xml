@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Dashboard">
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbar"
-        android:background="@color/mainColor"
-        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:titleTextColor="@color/white"/>
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:background="@color/mainColor"-->
+<!--        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+<!--        app:titleTextColor="@color/white"/>-->
 
     <FrameLayout
         android:layout_width="match_parent"

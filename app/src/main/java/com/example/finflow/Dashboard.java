@@ -26,8 +26,8 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("FinFlow");
+//        Toolbar toolbar = findViewById(R.id.toolbar);
+//        toolbar.setTitle("FinFlow");
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

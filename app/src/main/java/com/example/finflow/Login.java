@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -29,6 +32,8 @@ public class Login extends AppCompatActivity {
     Button loginbtn;
 
     TextView forgotPassTxt;
+    TextView signUpTV;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +44,11 @@ public class Login extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         loginbtn = (Button)findViewById(R.id.loginBtn);
         forgotPassTxt = (TextView)findViewById(R.id.forgotPassword);
+        signUpTV = (TextView)findViewById(R.id.signUpTV);
+
+
+
+
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +64,26 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        signUpTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // check if logged in or not
+        SharedPreferences prefs = this.getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+        boolean isLoggedIn = prefs.getBoolean("isLoggedIn", false); // Default to false if not found
+
+        if (isLoggedIn) {
+            // Proceed to the main activity
+            Intent intent = new Intent(this, Dashboard.class);
+            startActivity(intent);
+            finish(); // Close the current activity
+        }
+
 
 
     }
@@ -85,6 +115,12 @@ public class Login extends AppCompatActivity {
                           Log.d("FireStore","Username "+userData.getUsername());
                           Log.d("FireStore","Email "+userData.getEmail());
 
+                          SharedPreferences sharedPrefs = getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+                          SharedPreferences.Editor editor = sharedPrefs.edit();
+                          editor.putBoolean("isLoggedIn", true);
+                          editor.apply();
+                          Log.d("SharedPreferences","Created");
+
                       }
                       else{
                           Log.d("FireStore","No such Document");
@@ -97,6 +133,8 @@ public class Login extends AppCompatActivity {
                });
 
                 Toast.makeText(Login.this, "Log in successful.", Toast.LENGTH_SHORT).show();
+
+
 
                 Intent intent =  new Intent(getApplicationContext(), Dashboard.class);
                 startActivity(intent);

@@ -47,10 +47,10 @@ public class MainActivity1 extends AppCompatActivity implements NavigationView.O
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main1);
         getOnBackPressedDispatcher().addCallback(this, onBackPressedCallback);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("FinFlow");
+//        Toolbar toolbar = findViewById(R.id.toolbar);
+//        toolbar.setTitle("FinFlow");
         drawer_layout = findViewById(R.id.drawer_layout);
         navigationView = null;
 
