@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.FinFlow" parent="Theme.Material3.DayNight.NoActionBar">
-    </style>
+<!--    <style name="Base.Theme.FinFlow" parent="Theme.AppCompat.DayNight.DarkActionBar">-->
+<!--    </style>-->
     <style name="buttonBackground" parent="Widget.MaterialComponents.Button">
         <item name="android:backgroundTint">@color/ButtonBackground</item>
         <item name="android:shape">rectangle</item>
@@ -12,7 +12,7 @@
     <style name="searchBackground" parent="Widget.AppCompat.SearchView">
         <item name="android:background">@color/SearchBackground</item>
     </style>
-    <style name="Theme.FinFlow_New_Version" parent="Base.Theme.FinFlow">
+    <style name="Theme.FinFlow_New_Version" parent="Theme.Material3.DayNight">
         <item name="colorPrimary">@color/lavender</item>
         <item name="colorPrimaryVariant">@color/lavender</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -25,11 +25,25 @@
         <item name="android:windowEnterAnimation">@anim/slide_in</item>
         <item name="android:windowExitAnimation">@anim/slide_out</item>
     </style>
-    <style name="Theme.FinFlow_New_Version.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+<!--    <style name="Theme.FinFlow_New_Version.NoActionBar">-->
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+<!--    </style>-->
+<!--    <style name="Theme.FinFlow" parent="Theme.AppCompat.DayNight.DarkActionBar">-->
+<!--        <item name="android:windowBackground">@android:color/white</item>-->
+<!--    </style>-->
+    <style name="AlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
     </style>
-    <style name="Theme.FinFlow" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@android:color/white</item>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#F08080</item>
     </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#F08080</item>
+    </style>
+
+
 </resources>

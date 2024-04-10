@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,16 +16,20 @@
         android:theme="@style/Theme.FinFlow_New_Version"
         tools:targetApi="31">
         <activity
+            android:name=".LogIncomExpenseDashboard"
+            android:exported="false" />
+        <activity
             android:name=".RecoverAccount"
             android:exported="false" />
         <activity
             android:name=".Dashboard"
             android:exported="false" />
         <activity
-            android:name=".Login"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

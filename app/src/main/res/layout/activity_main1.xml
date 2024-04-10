@@ -20,12 +20,12 @@
             android:id="@+id/appBarLayout"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:id="@+id/toolbar"
-                android:background="@color/mainColor"
-                android:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:background="@color/mainColor"-->
+<!--                android:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
         </com.google.android.material.appbar.AppBarLayout>
         <FrameLayout
             android:layout_width="match_parent"
