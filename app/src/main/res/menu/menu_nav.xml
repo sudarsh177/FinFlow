@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/dashboard"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/navigation_stats"
+        android:icon="@drawable/stats"
+        android:title="Stats" />
+
+    <item
+        android:id="@+id/navigation_income"
+        android:icon="@drawable/income"
+        android:title="Income" />
+
+    <item
+        android:id="@+id/navigation_expense"
+        android:icon="@drawable/expense"
+        android:title="Expense" />
+    <!-- Add more items as needed -->
+</menu>
