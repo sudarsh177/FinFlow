@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:id="@+id/home_id"
-        android:title="@string/home1"
-        android:icon="@drawable/home_logo"/>
+<!--    <item-->
+<!--        android:id="@+id/home_id"-->
+<!--        android:title="@string/home1"-->
+<!--        android:icon="@drawable/home_logo"/>-->
 
     <item
         android:id="@+id/stocks_id"
@@ -20,5 +20,9 @@
         android:id="@+id/news_id"
         android:title="@string/news_feed1"
         android:icon="@drawable/news_feed_logo" />
+    <item
+        android:id="@+id/remainder"
+        android:title="@string/bill_payment_remainder"
+        android:icon="@drawable/payment_remainder" />
 
 </menu>

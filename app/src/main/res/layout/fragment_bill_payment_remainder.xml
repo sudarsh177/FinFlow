@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".bottom_fragment.BillPaymentRemainderFragment"
     android:id="@+id/bill_container">
 
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Bill Payment Remainder"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@color/backgroundColor"/>
+        android:id="@+id/bottomFragment"/>
 
-</FrameLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add_reminder"
+            style="@style/Theme.Apersonalstuff.HomeMenuButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:text="@string/add_reminder2"
+            app:icon="@drawable/ic_add_alert_black"
+            android:layout_marginTop="50dp"/>
+    </GridLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

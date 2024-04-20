@@ -1,6 +1,7 @@
 package com.example.finflow.income_expense_bottom_fragment;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -23,6 +27,7 @@ import android.widget.TextView;
 
 import com.example.finflow.Model.Data;
 import com.example.finflow.R;
+import com.example.finflow.UserProfile;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
@@ -110,6 +115,7 @@ public class IncomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_income, container, false);
 
@@ -394,5 +400,27 @@ public class IncomeFragment extends Fragment {
         dialog.show();
 
 
+    }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.main_menu, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle menu item clicks here
+        int id = item.getItemId();
+        if (id == R.id.user_profile) {
+            // Handle user profile action
+            Intent intent = new Intent(getActivity(), UserProfile.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.logout) {
+            // Handle logout action
+            // Implement logout functionality here
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

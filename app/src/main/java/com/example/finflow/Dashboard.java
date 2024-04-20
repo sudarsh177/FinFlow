@@ -50,6 +50,8 @@ public class Dashboard extends AppCompatActivity {
                         selectedFragment = new StocksWatchlistFragment();
                     } else if (item.getItemId() == R.id.news_id) {
                         selectedFragment = new NewsFeedFragment();
+                    } else if (item.getItemId() == R.id.remainder) {
+                        selectedFragment = new BillPaymentRemainderFragment();
                     }
                     if (selectedFragment != null) {
                         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -61,6 +63,22 @@ public class Dashboard extends AppCompatActivity {
                 }
             }
         });
-        getSupportFragmentManager().beginTransaction().replace(R.id.bottomFragment, new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.bottomFragment, new StocksWatchlistFragment()).commit();
     }
 }
+//package com.example.finflow;
+//
+//import android.os.Bundle;
+//import androidx.appcompat.app.AppCompatActivity;
+//
+//import com.example.finflow.bottom_fragment.HomeFragment;
+//
+//public class Dashboard extends AppCompatActivity {
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_dashboard);
+//        getSupportFragmentManager().beginTransaction().replace(R.id.bottomFragment, new HomeFragment()).commit();
+//    }
+//}

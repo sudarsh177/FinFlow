@@ -1,5 +1,6 @@
 package com.example.finflow.income_expense_bottom_fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -7,6 +8,9 @@ import androidx.fragment.app.Fragment;
 
 import android.util.Pair;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -15,6 +19,7 @@ import android.widget.Spinner;
 
 import com.example.finflow.Model.Data;
 import com.example.finflow.R;
+import com.example.finflow.UserProfile;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.BarData;
@@ -114,7 +119,7 @@ public class StatsFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         mAuth = FirebaseAuth.getInstance();
-
+        setHasOptionsMenu(true);
         FirebaseUser mUser = mAuth.getCurrentUser();
         String uid = mUser.getUid();
 
@@ -310,6 +315,28 @@ public class StatsFragment extends Fragment {
         pieChart.setDescription(null); // Hide the description
         pieChart.animateXY(1400, 1400); // Animate the pie chart
         pieChart.invalidate(); // Redraw the pie chart
+    }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.main_menu, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle menu item clicks here
+        int id = item.getItemId();
+        if (id == R.id.user_profile) {
+            // Handle user profile action
+            Intent intent = new Intent(getActivity(), UserProfile.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.logout) {
+            // Handle logout action
+            // Implement logout functionality here
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
