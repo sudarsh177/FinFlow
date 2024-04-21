@@ -1,6 +1,7 @@
     package com.example.finflow.income_expense_bottom_fragment;
 
     import android.app.AlertDialog;
+    import android.content.Intent;
     import android.os.Bundle;
 
     import androidx.annotation.NonNull;
@@ -11,6 +12,9 @@
     import android.text.TextUtils;
     import android.util.Log;
     import android.view.LayoutInflater;
+    import android.view.Menu;
+    import android.view.MenuInflater;
+    import android.view.MenuItem;
     import android.view.View;
     import android.view.ViewGroup;
     import android.view.animation.Animation;
@@ -25,6 +29,7 @@
 
     import com.example.finflow.Model.Data;
     import com.example.finflow.R;
+    import com.example.finflow.UserProfile;
     import com.firebase.ui.database.FirebaseRecyclerAdapter;
     import com.firebase.ui.database.FirebaseRecyclerOptions;
     import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -111,7 +116,7 @@
                                  Bundle savedInstanceState) {
             // Inflate the layout for this fragment
             View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
-
+            setHasOptionsMenu(true);
             mAuth = FirebaseAuth.getInstance();
 
             FirebaseUser mUser = mAuth.getCurrentUser();
@@ -514,7 +519,28 @@
             }
         }
 
+        @Override
+        public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+            inflater.inflate(R.menu.main_menu, menu);
+            super.onCreateOptionsMenu(menu, inflater);
+        }
 
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            // Handle menu item clicks here
+            int id = item.getItemId();
+            if (id == R.id.user_profile) {
+                // Handle user profile action
+                Intent intent = new Intent(getActivity(), UserProfile.class);
+                startActivity(intent);
+                return true;
+            } else if (id == R.id.logout) {
+                // Handle logout action
+                // Implement logout functionality here
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
 
 
 

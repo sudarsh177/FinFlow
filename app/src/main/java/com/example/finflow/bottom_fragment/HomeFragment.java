@@ -1,5 +1,6 @@
 package com.example.finflow.bottom_fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,9 +14,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.finflow.MainActivity1;
 import com.example.finflow.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.button.MaterialButton;
 
 public class HomeFragment extends Fragment {
 
@@ -28,17 +30,63 @@ public class HomeFragment extends Fragment {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-                if (id == R.id.home_id) {
-                    replaceFragment(new HomeFragment());
-                } else if (id == R.id.stocks_id) {
-                    replaceFragment(new StocksWatchlistFragment());
-                } else if (id == R.id.logIncomeExpenses_id) {
-                    replaceFragment(new LogIncomeExpensesFragment());
-                } else if (id == R.id.news_id) {
-                    replaceFragment(new NewsFeedFragment());
+                Fragment fragment = null;
+                switch (item.getItemId()) {
+                    case R.id.home_id:
+                        fragment = new HomeFragment();
+                        break;
+                    case R.id.stocks_id:
+                        fragment = new StocksWatchlistFragment();
+                        break;
+                    case R.id.logIncomeExpenses_id:
+                        fragment = new LogIncomeExpensesFragment();
+                        break;
+                    case R.id.news_id:
+                        fragment = new NewsFeedFragment();
+                        break;
+                    case R.id.remainder:
+                        fragment = new BillPaymentRemainderFragment();
+                        break;
                 }
-                return true;
+                if (fragment != null) {
+                    replaceFragment(fragment);
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        });
+
+        MaterialButton stocksWatchlist = view.findViewById(R.id.stocks_watchlist);
+        stocksWatchlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replaceFragment(new StocksWatchlistFragment());
+            }
+        });
+
+        MaterialButton logIncomeExpenses = view.findViewById(R.id.log_income_expenses);
+        logIncomeExpenses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replaceFragment(new LogIncomeExpensesFragment());
+            }
+        });
+
+        MaterialButton newsFeed = view.findViewById(R.id.news_feed);
+        newsFeed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replaceFragment(new NewsFeedFragment());
+            }
+        });
+
+        MaterialButton addItemReminderButton = view.findViewById(R.id.button_add_item_reminder);
+        addItemReminderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MainActivity1.class);
+                startActivity(intent);
             }
         });
 

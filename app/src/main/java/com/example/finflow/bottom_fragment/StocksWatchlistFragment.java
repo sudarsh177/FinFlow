@@ -35,6 +35,8 @@ import com.example.finflow.R;
 import com.example.finflow.StockAdapter;
 import com.example.finflow.StockToCompanyMapRunnable;
 import com.example.finflow.StocksDataDowloaderRunnable;
+import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -63,7 +65,8 @@ public class StocksWatchlistFragment extends Fragment implements View.OnClickLis
     private StockAdapter stockAdapter;
     private static final String STOCK_URL = "http://www.marketwatch.com/investing/stock/";
     private String someStock;
-
+//    private BottomAppBar bottomAppBar;
+//    private View view;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -86,6 +89,8 @@ public class StocksWatchlistFragment extends Fragment implements View.OnClickLis
      * @param param2 Parameter 2.
      * @return A new instance of fragment StocksWatchlistFragment.
      */
+
+
     // TODO: Rename and change types and number of parameters
     public static StocksWatchlistFragment newInstance(String param1, String param2) {
         StocksWatchlistFragment fragment = new StocksWatchlistFragment();
@@ -120,7 +125,10 @@ public class StocksWatchlistFragment extends Fragment implements View.OnClickLis
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_stocks_watchlist, container, false);
-
+//        bottomAppBar = view.findViewById(R.id.bottomAppBar1);
+//        showBottomAppBar(true);
+//        BottomNavigationView bottomNavigationView = view.findViewById(R.id.bottomNavigation);
+//        bottomNavigationView.setVisibility(View.VISIBLE);
         recyclerView = view.findViewById(R.id.recyclerView);
         stockAdapter = new StockAdapter(stocksList,StocksWatchlistFragment.this);
         recyclerView.setAdapter(stockAdapter);
@@ -493,5 +501,25 @@ public class StocksWatchlistFragment extends Fragment implements View.OnClickLis
 
 
     }
+
+//    private void showBottomAppBar(boolean show) {
+//        if(view!=null) {
+//            BottomAppBar bottomAppBar = view.findViewById(R.id.bottomAppBar);
+//            if (bottomAppBar != null) {
+//                bottomAppBar.setVisibility(show ? View.VISIBLE : View.GONE);
+//            }
+//        }
+//    }
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        showBottomAppBar(true); // Ensure the BottomAppBar is visible when HomeFragment is resumed
+//    }
+//    private void showBottomAppBar(boolean show) {
+//        BottomAppBar bottomAppBar = requireActivity().findViewById(R.id.bottomAppBar);
+//        if (bottomAppBar != null) {
+//            bottomAppBar.setVisibility(View.VISIBLE);
+//        }
+//    }
 
 }

@@ -1,8 +1,12 @@
 package com.example.finflow.bottom_fragment;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -23,6 +27,7 @@ import com.example.finflow.OnFetchDataListener;
 import com.example.finflow.R;
 import com.example.finflow.RequestManager;
 import com.example.finflow.SelectListener;
+import com.example.finflow.UserProfile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +49,7 @@ public class NewsFeedFragment extends Fragment implements SelectListener, View.O
         Button btnScience = view.findViewById(R.id.btn_5);
         Button btnSports = view.findViewById(R.id.btn_6);
         Button btnTechnology = view.findViewById(R.id.btn_7);
-
+        setHasOptionsMenu(true);
         btnBusiness.setOnClickListener(this);
         btnEntertainment.setOnClickListener(this);
         btnGeneral.setOnClickListener(this);
@@ -155,5 +160,27 @@ public class NewsFeedFragment extends Fragment implements SelectListener, View.O
                 .replace(R.id.bottomFragment, detailsFragment)
                 .addToBackStack(null)
                 .commit();
+    }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.main_menu, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle menu item clicks here
+        int id = item.getItemId();
+        if (id == R.id.user_profile) {
+            // Handle user profile action
+            Intent intent = new Intent(getActivity(), UserProfile.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.logout) {
+            // Handle logout action
+            // Implement logout functionality here
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

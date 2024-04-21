@@ -1,15 +1,20 @@
 package com.example.finflow.bottom_fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.finflow.R;
+import com.example.finflow.UserProfile;
 import com.example.finflow.income_expense_bottom_fragment.Dashboard;
 import com.example.finflow.income_expense_bottom_fragment.ExpenseFragment;
 import com.example.finflow.income_expense_bottom_fragment.IncomeFragment;
@@ -51,6 +56,7 @@ public class LogIncomeExpensesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_log_income_expenses, container, false);
+        setHasOptionsMenu(true);
         BottomNavigationView navigation = view.findViewById(R.id.navigation);
         navigation.setOnItemSelectedListener(item -> {
             Fragment selectedFragment = null;
@@ -74,5 +80,27 @@ public class LogIncomeExpensesFragment extends Fragment {
             return true;
         });
         return view;
+    }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.main_menu, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle menu item clicks here
+        int id = item.getItemId();
+        if (id == R.id.user_profile) {
+            // Handle user profile action
+            Intent intent = new Intent(getActivity(), UserProfile.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.logout) {
+            // Handle logout action
+            // Implement logout functionality here
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -14,4 +14,21 @@
     <color name="indicatorColor">#03FF72</color>
     <color name="backgroundColor">#F3DE4F</color>
     <color name="mainColor">#00A4CC</color>
+    <color name="gray_700">#616161</color>
+    <color name="light_green_600">#7CB342</color>
+    <color name="light_green_200">#C5E1A5</color>
+    <color name="lime_600">#C0CA33</color>
+    <color name="green_600">#43A047</color>
+    <color name="green_200">#A5D6A7</color>
+    <color name="daynight_white_black">@color/white</color>
+    <color name="daynight_gray_700_white">@color/gray_700</color>
+    <color name="daynight_black_white">@color/black</color>
+    <color name="daynight_light_green_600_green_600">@color/light_green_600</color>
+    <color name="red">#FF0000</color>
+    <color name="toolbar_title">#ffffff</color>
+    <color name="primary">#37474f</color>
+    <color name="primary_dark">#263238</color>
+    <color name="accent">#78909c</color>
+    <color name="control_normal">#888888</color>
+    <color name="fab_pressed">#546e7a</color>
 </resources>
