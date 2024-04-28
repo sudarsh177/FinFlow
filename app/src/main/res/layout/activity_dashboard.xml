@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Dashboard">
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:background="@color/mainColor"-->
+<!--        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+<!--        app:titleTextColor="@color/white"/>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bottomFragment"/>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="10dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:fabAlignmentMode="center">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomNavigation"
+            android:elevation="0dp"
+            app:itemRippleColor="@color/rippleColor"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_menu"/>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".bottom_fragment.HomeFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bottomFragments"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stocks_watchlist"
+            style="@style/Theme.Apersonalstuff.HomeMenuButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:text="@string/stocks_watchlist2"
+            app:icon="@drawable/stocks_watchlist_logo"
+            android:layout_marginTop="50dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/log_income_expenses"
+            style="@style/Theme.Apersonalstuff.HomeMenuButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:text="@string/log_income_expenses2"
+            app:icon="@drawable/add_income_logo"
+            android:layout_marginTop="50dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/news_feed"
+            style="@style/Theme.Apersonalstuff.HomeMenuButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:text="@string/news_feed2"
+            app:icon="@drawable/news_feed_logo"
+            android:layout_marginTop="50dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add_item_reminder"
+            style="@style/Theme.Apersonalstuff.HomeMenuButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:text="@string/add_reminder2"
+            app:icon="@drawable/ic_add_alert_black"
+            android:layout_marginTop="50dp"/>
+    </GridLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="10dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:fabAlignmentMode="center">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomNavigation"
+            android:elevation="0dp"
+            app:itemRippleColor="@color/rippleColor"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_menu"/>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

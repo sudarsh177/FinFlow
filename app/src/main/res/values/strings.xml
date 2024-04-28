@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">FinFlow</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <string name="feedback">Feedback</string>
+    <string name="share">Share</string>
+    <string name="about_us">About Us</string>
+    <string name="logout">Logout</string>
+    <string name="finflow">FinFlow</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="bill_payment_remainder">Bill Payment Remainder</string>
+    <string name="news_feed">News Feed</string>
+    <string name="stocks_watchlist">Stocks Watchlist</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="home1">Home</string>
+    <string name="stocks_watchlist1">Stocks Watchlist</string>
+    <string name="bill_payment_remainder1">Bill Payment Remainder</string>
+    <string name="news_feed1">News Feed</string>
+    <string name="api_key">59c4816a59d54c179b475b38d764a631</string>
+    <string name="hamburger_menu">Hamburger Menu</string>
+    <string name="business">Business</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="general">General</string>
+    <string name="health">Health</string>
+    <string name="science">Science</string>
+    <string name="sports">Sports</string>
+    <string name="technology">Technology</string>
+    <string name="log_income_expenses">Log Income/ Expenses</string>
+    <string name="log_income_expenses1">Log Income/ Expenses</string>
+    <string name="stocks">Stocks</string>
+    <string name="stockSymbol">stockSymbol</string>
+    <string name="price">price</string>
+    <string name="priceChange">priceChange</string>
+    <string name="companyName">companyName</string>
+    <string name="addStockMenu">addStockMenu</string>
+    <string name="title_items">Title Items</string>
+    <string name="title_select_items">Title Select Items</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="no_reminders">Click on the plus button below to begin creating your reminders!</string>
+    <string name="licenses">Licenses</string>
+    <string name="title_activity_licenses">Licenses</string>
+    <string name="action_discard_reminder">Discard Reminder</string>
+    <string name="action_save_reminder">Save Reminder</string>
+    <string name="title_activity_add_reminder">Add Reminder</string>
+    <string name="title_activity_edit_reminder">Edit Reminder</string>
+    <string name="add_reminder">Reminder</string>
+    <string name="details">Details</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="repeat">Repeat</string>
+    <string name="repeat_off">Off</string>
+    <string name="repeat_no">Repetition Interval </string>
+    <string name="repeat_type">Type of Repetitions</string>
+    <string name="user_profile">User Profile</string>
+    <string name="user_profile1">User Profile</string>
+    <string name="logout1">Logout</string>
+    <string name="channel_id_reminders">reminders_channel</string>
+    <string name="stocks_watchlist2">Stocks Watchlist</string>
+    <string name="log_income_expenses2">Log Income/Expenses</string>
+    <string name="news_feed2">News Feed</string>
+    <string name="add_reminder2">Add Reminder</string>
+
+    <string name="actionBarTitle">ToDo</string>
+    <string name="editTaskHint">My Task</string>
+    <string name="dialogDate">Date</string>
+    <string name="dialogTime">Time</string>
+    <string name="cardTitle">Title</string>
+    <string name="cardDate">sub title</string>
+    <string name="cardTime">sub title</string>
+
+    <string name="listEmptyText">
+<![CDATA[
+<p><b>What do you want to be reminded about?</b><br> You can create new Reminder <br>using + button at the top</p>
+]]>
+</string>
+
+</resources>

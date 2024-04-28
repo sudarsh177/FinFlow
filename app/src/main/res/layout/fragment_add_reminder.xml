@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReminderCode.AddReminderFragment"
+    android:id="@+id/reminder_fragment">
+
+    <FrameLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emptyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="100dp"
+            android:gravity="center_horizontal"
+            android:textSize="20sp" />
+
+<!--        <com.airbnb.lottie.LottieAnimationView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:lottie_autoPlay="true"-->
+<!--            app:lottie_loop="true"-->
+<!--            app:lottie_rawRes="@raw/animation" />-->
+    </FrameLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:clickable="true"
+        android:elevation="12dp"
+        android:focusable="true"
+        app:layout_anchor="@id/emptyView"
+        app:layout_anchorGravity="top|end"
+
+        app:srcCompat="@drawable/ic_add_white_24dp"/>
+    <ListView
+        android:id="@+id/itemsList"
+        android:layout_width="match_parent"
+        android:layout_height="513dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="16dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="16dp"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

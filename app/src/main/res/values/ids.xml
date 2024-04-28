@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="home_id" type="id"/>
+    <item name="stocks_id" type="id"/>
+    <item name="bill_id" type="id"/>
+    <item name="news_id" type="id"/>
+    <item name="remainder" type="id"/>
+</resources>
